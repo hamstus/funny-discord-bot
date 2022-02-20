@@ -1,0 +1,60 @@
+    /*if (guild) {
+        commands = guild.commands
+    } else{
+        commands = client.application?.commands
+    }
+
+    commands?.create({
+        name: 'ping',
+        description: 'pong',
+    })
+    commands?.create({
+        name: 'add',
+        description: 'add',
+        options: [{
+            name : 'num1',
+            description: 'the first number',
+            required: true,
+            type: DiscordJS.Constants.ApplicationCommandOptionTypes.NUMBER
+        },
+        {
+            name: 'num2',
+            description: 'the second number',
+            required: true,
+            type: DiscordJS.Constants.ApplicationCommandOptionTypes.NUMBER
+        }
+            
+
+        ]
+    })
+
+})
+
+client.on('interactionCreate', async (interaction) => {
+    if (!interaction.isCommand()) {
+        return
+    }
+
+    const { commandName, options} = interaction
+
+    if (commandName === 'ping'){
+        interaction.reply({
+            content: "pong",
+        })
+    }else if (commandName === 'add'){
+        const num1 = options.getNumber('num1')!
+        const num2 = options.getNumber('num2')!
+
+        interaction.reply({
+            content: `the sum is ${num1 + num2}`,
+            ephemeral: true,
+        })
+    }
+
+})
+
+
+
+client.login(process.env.TOKEN);
+
+*/
